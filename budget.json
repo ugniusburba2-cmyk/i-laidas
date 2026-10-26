@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Valstybės biudžetas",
+    "year": 2026,
+    "currency": "EUR",
+    "unit": "mln. EUR",
+    "population": 2800000,
+    "source": "PAVYZDINIAI DUOMENYS. Skaičiai išgalvoti demonstracijai, nėra tikri valstybės duomenys.",
+    "updated": "2026-10-26"
+  },
+  "income": [
+    { "name": "Gyventojų pajamų mokestis", "amount": 5200 },
+    { "name": "Pridėtinės vertės mokestis", "amount": 4300 },
+    { "name": "Akcizai", "amount": 1900 },
+    { "name": "Socialinio draudimo įmokos", "amount": 3600 },
+    { "name": "ES parama", "amount": 1100 },
+    { "name": "Kiti mokesčiai ir pajamos", "amount": 900 }
+  ],
+  "expenses": [
+    {
+      "id": "svietimas", "name": "Švietimas", "amount": 3100,
+      "items": [
+        { "name": "Bendrojo ugdymo mokyklos", "amount": 1900 },
+        { "name": "Aukštasis mokslas", "amount": 800 },
+        { "name": "Profesinis mokymas", "amount": 400 }
+      ]
+    },
+    {
+      "id": "sveikata", "name": "Sveikatos apsauga", "amount": 3300,
+      "items": [
+        { "name": "Ligoninės ir gydymas", "amount": 2400 },
+        { "name": "Vaistai ir kompensacijos", "amount": 600 },
+        { "name": "Visuomenės sveikata", "amount": 300 }
+      ]
+    },
+    {
+      "id": "socialine", "name": "Socialinė apsauga", "amount": 4600,
+      "items": [
+        { "name": "Pensijos", "amount": 3300 },
+        { "name": "Socialinės pašalpos", "amount": 800 },
+        { "name": "Šeimos paramos", "amount": 500 }
+      ]
+    },
+    {
+      "id": "transportas", "name": "Transportas ir keliai", "amount": 1500,
+      "items": [
+        { "name": "Kelių priežiūra ir statyba", "amount": 1100 },
+        { "name": "Viešasis transportas", "amount": 400 }
+      ]
+    },
+    {
+      "id": "gynyba", "name": "Gynyba", "amount": 2000,
+      "items": [
+        { "name": "Kariuomenės išlaikymas", "amount": 1400 },
+        { "name": "Įranga ir modernizavimas", "amount": 600 }
+      ]
+    },
+    {
+      "id": "aplinka", "name": "Aplinka ir energetika", "amount": 900,
+      "items": [
+        { "name": "Atsinaujinanti energija", "amount": 500 },
+        { "name": "Vandens ir atliekų ūkis", "amount": 400 }
+      ]
+    },
+    {
+      "id": "palisa", "name": "Valstybės valdymas", "amount": 1100,
+      "items": [
+        { "name": "Ministerijos ir įstaigos", "amount": 800 },
+        { "name": "Teismai ir teisėsauga", "amount": 300 }
+      ]
+    },
+    {
+      "id": "palukanos", "name": "Skolos palūkanos", "amount": 500,
+      "items": [
+        { "name": "Valstybės skolos palūkanos", "amount": 500 }
+      ]
+    }
+  ]
+}

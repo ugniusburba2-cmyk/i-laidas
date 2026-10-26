@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Atviras valstybės biudžetas: pajamos, išlaidos ir likutis aiškiai ir visiems prieinamai.">
+  <meta name="theme-color" content="#0b3d2e">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Atviras biudžetas</title>
+</head>
+<body>
+  <a class="skip" href="#main">Pereiti prie turinio</a>
+
+  <header class="top">
+    <div class="wrap top-in">
+      <div class="brand">
+        <img src="icon.svg" width="40" height="40" alt="">
+        <div>
+          <p class="brand-t">Atviras biudžetas</p>
+          <p class="brand-s" id="subtitle">Kuriame skaidrumą</p>
+        </div>
+      </div>
+      <button class="btn ghost" id="theme" type="button" aria-pressed="false">Tamsi tema</button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="notice" role="note">
+      <strong>Demonstracinė versija.</strong> Visi skaičiai šiame puslapyje yra pavyzdiniai ir nėra tikri valstybės duomenys.
+    </div>
+
+    <p class="status" id="status" role="status">Kraunami duomenys…</p>
+
+    <section class="cards" aria-label="Pagrindiniai rodikliai" id="cards" hidden>
+      <article class="card kpi k-in"><p>Pajamos</p><strong id="kpi-in">–</strong></article>
+      <article class="card kpi k-out"><p>Išlaidos</p><strong id="kpi-out">–</strong></article>
+      <article class="card kpi k-bal"><p>Likutis</p><strong id="kpi-bal">–</strong></article>
+      <article class="card kpi"><p>Išlaidos vienam gyventojui</p><strong id="kpi-pc">–</strong></article>
+    </section>
+
+    <section class="card" id="expenses-sec" aria-labelledby="exp-t" hidden>
+      <div class="sec-head">
+        <h2 id="exp-t">Kur eina pinigai</h2>
+        <input class="search" id="search" type="search" placeholder="Ieškoti išlaidų…" aria-label="Ieškoti išlaidų">
+      </div>
+      <div class="split">
+        <div class="donut-wrap">
+          <svg id="donut" viewBox="0 0 200 200" role="img" aria-label="Išlaidų pasiskirstymas"></svg>
+          <div class="donut-center" id="donut-center"></div>
+        </div>
+        <ul class="legend" id="legend"></ul>
+      </div>
+      <div class="drill" id="drill" hidden>
+        <div class="drill-head">
+          <h3 id="drill-t"></h3>
+          <button class="btn ghost small" id="drill-close" type="button">Uždaryti</button>
+        </div>
+        <ul class="items" id="drill-items"></ul>
+      </div>
+    </section>
+
+    <section class="card" id="income-sec" aria-labelledby="inc-t" hidden>
+      <h2 id="inc-t">Iš kur gaunami pinigai</h2>
+      <ul class="bars" id="income-bars"></ul>
+    </section>
+
+    <section class="card" id="donate-sec" aria-labelledby="don-t" hidden>
+      <h2 id="don-t">Paremti valstybę</h2>
+      <p class="muted">Paaukojus tam tikrą sumą, galite pamatyti, kiek ji sudarytų nuo viso biudžeto vienam gyventojui ir kuriai sričiai.</p>
+      <div class="donate-form">
+        <label for="amount">Suma, EUR</label>
+        <div class="row">
+          <input id="amount" type="number" min="1" step="1" value="50" inputmode="numeric">
+          <select id="area" aria-label="Sritis"></select>
+        </div>
+        <div class="result" id="result" aria-live="polite"></div>
+      </div>
+      <div class="donate-cta">
+        <a class="btn primary" id="official" href="#" target="_blank" rel="noopener" hidden>Aukoti oficialiais kanalais</a>
+        <p class="muted small" id="official-note">Oficiali aukojimo nuoroda dar nepridėta. Čia bus nurodytas tik oficialus valstybės kanalas. Šis puslapis pinigų nerenka.</p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="data-t" id="data-sec" hidden>
+      <h2 id="data-t">Duomenys</h2>
+      <p class="muted small" id="source"></p>
+      <div class="row wrap-row">
+        <button class="btn ghost" id="csv" type="button">Atsisiųsti CSV</button>
+        <a class="btn ghost" href="budget.json" download>Atsisiųsti JSON</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap"><p>Kiekvienas gali patikrinti skaičius. Duomenys saugomi viename faile, kurį galima atsisiųsti ir palyginti.</p></div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
